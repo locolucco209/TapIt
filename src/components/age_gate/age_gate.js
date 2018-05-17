@@ -3,6 +3,12 @@ import './index.css';
 
 
 class age_gate extends React.Component {
+    
+    ageCalculator(event){
+        event.preventDefault();
+        console.log("click")
+    }
+
     render() {
 
         return (
@@ -22,7 +28,7 @@ class age_gate extends React.Component {
 
                 <div className="row">
                     <div className="col-12 col-sm-12">
-                        <input className="btn btn-ageverification btn-enter form-submit" id="edit-enter" name="enter" value="ENTER" type="submit" />
+                        <input className="btn btn-ageverification btn-enter form-submit" onClick={this.ageCalculator} id="edit-enter" name="enter" value="ENTER" type="submit" />
                     </div>
                 </div>
 

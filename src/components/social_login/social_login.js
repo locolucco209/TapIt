@@ -31,18 +31,17 @@ class social_login extends React.Component {
                 <div className="medium-12 columns">
                     <h1 id="WelcomeText">Please Login Wih Your Social Login</h1>
 
-                    {/* <FacebookLogin
+                    <FacebookLogin
                         appId="193877681244422"
                         autoLoad={true}
                         fields="name,email,picture"
                         callback={responseFacebook}
                         cssClass="my-facebook-button-class"
-                        icon={<TiSocialFacebookCircular />}
-                    /> */}
+                    />
 
                         <GoogleLogin
                             clientId="304197832114-31j6ba4ne6rq9evrlb2lfcejdb0n7b9j.apps.googleusercontent.com"
-                            buttonText="Login"
+                            buttonText="Google Login"
                             onSuccess={responseGoogle}
                             onFailure={responseGoogle}
                         />
