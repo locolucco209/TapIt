@@ -1,10 +1,14 @@
 import React from 'react';
 import './index.css';
+import GetTweets from '../get_tweets/get_tweets.js'
 
 class Add_user extends React.Component {
   render() {
     return(
-      <h1>Add User</h1>
+      <div>
+        <h1>Add User</h1>
+        <GetTweets />
+      </div>
     );
   };
 };
