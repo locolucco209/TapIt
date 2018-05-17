@@ -10,7 +10,9 @@
     "react-facebook-login": "^4.0.1",
     "react-google-login": "^3.2.1",
     "react-router-dom": "^4.2.2",
-    "react-scripts": "1.1.4"
+    "react-scripts": "1.1.4",
+    "request": "^2.86.0",
+    "twitter": "^1.7.1"
   },
   "scripts": {
     "start": "node server.js",

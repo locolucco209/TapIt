@@ -1,0 +1,25 @@
+
+my-tweets, 
+my-tweets, 
+my-tweets, Result: 1, Programmer (noun.)
+A machine that turns coffee into code., Thu Apr 05 08:49:41 +0000 2018, Result: 2, Q: 0 is false and 1 is true, right?
+A: 1., Thu Apr 05 08:48:58 +0000 2018, Result: 3, #wife  {
+  right: 100%;
+  margin: 0;
+}, Thu Apr 05 08:48:28 +0000 2018, Result: 4, Chuck Norris can take a screenshot of his blue screen.., Thu Apr 05 08:47:04 +0000 2018, Result: 5, //Life Motto
+if (sad() === true) {
+  sad.stop.();
+  beAwesome();
+}, Thu Apr 05 08:46:39 +0000 2018, Result: 6, ";" Hide and seek champion since 1958., Thu Apr 05 08:45:10 +0000 2018, Result: 7, https://t.co/59RL6hXU2D, Thu Apr 05 08:44:39 +0000 2018, Result: 8, space-taker 1, Thu Apr 05 08:43:55 +0000 2018, Result: 9, space-taker 2, Thu Apr 05 08:43:38 +0000 2018, Result: 10, space-taker 3, Thu Apr 05 08:43:26 +0000 2018, Result: 11, 3, Thu Apr 05 08:42:33 +0000 2018, Result: 12, 2, Thu Apr 05 08:42:28 +0000 2018, Result: 13, 1, Thu Apr 05 08:42:24 +0000 2018, Result: 14, //life motto
+if (sad() === true) {
+  sad.stop.();
+  beAwesome();
+}, Wed Apr 04 21:02:25 +0000 2018, Result: 15, #wife {
+  right: 100%;
+  margin: 0;
+}, Wed Apr 04 20:59:48 +0000 2018, Result: 16, Chuck Norris can take a screenshot of his blue screen., Wed Apr 04 20:53:27 +0000 2018, Result: 17, Q: 0 is false and 1 is true, right?
+A: 1, Wed Apr 04 20:52:09 +0000 2018, Result: 18, Programmer (noun.)
+A machine that turns coffee into code, Wed Apr 04 20:50:21 +0000 2018, Result: 19, ";" Hide and seek champion since 1958, Wed Apr 04 20:49:46 +0000 2018, Result: 20, #programmingjokes https://t.co/Drw68QtATX, Wed Apr 04 01:32:02 +0000 2018, 
+my-tweets, 
+my-tweets, 
+my-tweets, Result: 1, Tweet #2, Thu May 17 22:20:02 +0000 2018, Result: 2, Yo Yo Yo #1, Thu May 17 22:19:54 +0000 2018, 
