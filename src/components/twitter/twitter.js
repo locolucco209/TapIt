@@ -11,15 +11,17 @@ let [node, path, command, ...value] = process.argv;
 let getTweets = function() {
     logSearch();
     var params = {screen_name: 'TapItSD'};
-    client.get('statuses/user_timeline', params, function(error, tweets, response) {
+    client.get('statuses/home_timeline', params, function(error, tweets, response) {
         if (!error) {
-            for (let i = 0; i < 2; i++) {
+            for (let i = 0; i < 3; i++) {
                 let listing = i + 1
                 let t = tweets[i]
                 let twit = {
-                    number: listing,
-                    text: t.text,
-                    created: t.created_at,
+                    Number: listing,
+                    Account: t.user.screen_name,
+                    Name: t.user.name,
+                    Text: t.text,
+                    Created: t.created_at,
                 }
                 console.log(twit);
                 logTwit(twit);
