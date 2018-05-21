@@ -7,6 +7,7 @@ module.exports = (app) => {
 
   app.post('/api/sign_up', (req, res) => {
       console.log(req.body.data)
-      res.send("Working POST request")
+      res.send("Working from res.send")
     });
+
 }
