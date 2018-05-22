@@ -1,8 +1,8 @@
 import React from 'react';
 import './index.css';
-import GetTweets from '../get_tweets/get_tweets.js'
+import GetTweets from './get_tweets.js'
 
-class Add_user extends React.Component {
+class HomePage extends React.Component {
   render() {
     return(
       <div>
@@ -13,4 +13,4 @@ class Add_user extends React.Component {
   };
 };
 
-export default Add_user;
+export default HomePage;
