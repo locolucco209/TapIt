@@ -6,6 +6,7 @@ import FacebookLogin from 'react-facebook-login';
 
 import addGoogleUser from './add_google_user.js'
 
+
 class social_login extends React.Component {
    constructor(props) {
        super(props);
@@ -20,6 +21,9 @@ class social_login extends React.Component {
    }
 
    render() {
+
+    console.log(process.env.REACT_APP_Google_Client_Id)
+
        const responseFacebook = (response) => {
            console.log(response);
            this.signup(response, 'facebook')
@@ -36,7 +40,7 @@ class social_login extends React.Component {
 
                    <FacebookLogin
                        appId="193877681244422"
-                       autoLoad={true}
+                       autoLoad={false}
                        fields="name,email,picture"
                        callback={responseFacebook}
                        cssClass="my-facebook-button-class"
