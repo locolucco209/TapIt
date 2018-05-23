@@ -5,6 +5,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "body-parser": "^1.18.3",
+    "cookie-parser": "^1.4.3",
     "express": "^4.16.3",
     "mysql": "^2.15.0",
     "react": "^16.3.2",
@@ -22,7 +23,8 @@
     "start-react": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "push": "git add . && git commit -m 'qs' && git push heroku master"
   },
   "proxy": "http://localhost:8080"
 }
