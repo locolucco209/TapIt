@@ -1,20 +1,54 @@
 const connection = require('./connection.js')
 
 const Orm = {
+
+    hasUserAcount() {
+        // return new Promise((resolve, reject) => {
+        //   connection.query('SELECT * FROM burgers', function (error, results, fields){
+        //     if (error) {
+        //       reject(error)
+        //     } else {
+        //       resolve(results)
+        //     }
+        //   })
+        // })
+    },
     
-    signUpGo(req) {
-        // connection.query('', function (error, results, fields) {
-        //     if (error) throw error;
-        //     console.log('The solution is: ', results[0].solution);
-        //   });
+    newUser(req) {
+        // return new Promise((resolve, reject) => {
+        //   connection.query('SELECT * FROM burgers', function (error, results, fields){
+        //     if (error) {
+        //       reject(error)
+        //     } else {
+        //       resolve(results)
+        //     }
+        //   })
+        // })
     },
 
-    signUpFb(req) {
-        // connection.query('', function (error, results, fields) {
-        //     if (error) throw error;
-        //     console.log('The solution is: ', results[0].solution);
-        //   });
-    }
+    loginUser(req) {
+        // return new Promise((resolve, reject) => {
+        //   connection.query('SELECT * FROM burgers', function (error, results, fields){
+        //     if (error) {
+        //       reject(error)
+        //     } else {
+        //       resolve(results)
+        //     }
+        //   })
+        // })
+    },
+
+    logoutUser(req) {
+        // return new Promise((resolve, reject) => {
+        //   connection.query('SELECT * FROM burgers', function (error, results, fields){
+        //     if (error) {
+        //       reject(error)
+        //     } else {
+        //       resolve(results)
+        //     }
+        //   })
+        // })
+    },
 
 }
 
