@@ -6,6 +6,6 @@ const connection = mysql.createConnection({
   database : 'TapIt_db'
 });
  
-connection.connect();
+// connection.connect();
  
-export default connection;
+module.exports = connection;

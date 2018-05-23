@@ -1,16 +1,17 @@
 import axios from 'axios'
 
 const addGoogleUser = (response) => {
-
-    axios.post('/api/sign_up', {
+  
+    axios.post('/api/sign_up_Go', {
         data: {response}
       })
-      .then(function (response) {
+      .then((response) => {
         console.log(response);
       })
-      .catch(function (error) {
+      .catch((error) => {
         console.log(error);
       });
+
 }
 
 export default addGoogleUser
