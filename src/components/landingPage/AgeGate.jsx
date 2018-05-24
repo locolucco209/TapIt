@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import SocialLogin from './SocialLogin/SocialLogin.js'
 import './AgeGate.css';
 
 class AgeGate extends Component {
@@ -9,7 +10,8 @@ class AgeGate extends Component {
         super(props);
         this.state = {
             ageCheck: true,
-            showText: false
+            showText: false,
+            showSocial: false
         };
 
         this.ageCalculator = this.ageCalculator.bind(this);
@@ -40,6 +42,8 @@ class AgeGate extends Component {
 
             if (age < 21) {
                 this.setState({ ageCheck: false })
+            } else {
+                this.setState({ showSocial: true })
             }
 
         } else {
@@ -71,6 +75,10 @@ class AgeGate extends Component {
                             <input className="btn btn-warning age-submit" onClick={this.ageCalculator} id="edit-enter" name="enter" value="Submit" type="submit" />
                             <br /><br />
                             {this.state.showText && <Show />}
+                        </div>
+
+                        <div>
+                            {this.state.showSocial && <SocialLogin />}
                         </div>
 
                     </div>
