@@ -1,4 +1,4 @@
-import LandingPage from './landingPage/landingPage.js'
+import LandingPage from './landingPage/landingPage.jsx'
 import HomePage from './homePage/homePage.js'
 
 export {
