@@ -35,12 +35,13 @@ class SocialLogin extends Component {
             console.log(response);
             this.signup(response, 'facebook')
             addFbUser(response)
+            this.redirectToTarget()
         }
         const responseGoogle = (response) => {
             console.log(response);
             this.signup(response, 'google')
             addGoogleUser(response)
-            //this.redirectToTarget()
+            this.redirectToTarget()
         }
         
         return (
