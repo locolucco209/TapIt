@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-import { HashRouter, Route } from 'react-router-dom'
-import PropTypes from 'prop-types'
+import { HashRouter, Route } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import GoogleLogin from 'react-google-login';
 import FacebookLogin from 'react-facebook-login';
-import addGoogleUser from './addUsers/addGoogleUser'
-import addFbUser from './addUsers/addFbUser'
+import addGoogleUser from './addUsers/addGoogleUser';
+import addFbUser from './addUsers/addFbUser';
+import './SocialLogin.css';
 
 const request = require('request');
 
@@ -53,7 +54,8 @@ class SocialLogin extends Component {
                         autoLoad={false}
                         fields="first_name,last_name,email"
                         callback={responseFacebook}
-                        cssClass="my-facebook-button-class"
+                        // cssClass="fa fa-facebook"
+                    
                     />
 
                     <GoogleLogin
@@ -63,7 +65,6 @@ class SocialLogin extends Component {
                         onFailure={responseGoogle}
                     />
 
-                    <a href="/signup" className="button success">Signup</a>
                 </div>
             </div>
         );
