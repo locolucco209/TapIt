@@ -6,17 +6,22 @@ const Orm = {
     hasUserAcount(user) {
           connection.query('SELECT email FROM user_accounts;', function (error, results, fields){
             if (error) {console.log(error)}
-            let temp = JSON.parse(JSON.stringify(results))
-            console.log(temp)
-            // results.find((element) => {
-            //     if (element === user.email){
-            //         console.log("Looks like you already have an account")
-            //         //Orm.loginUser(user)
-            //     } else {
+            allEmailAddresses = []
+            results.map((item, index) => {
+                allEmailAddresses.push(results[index].email)
+            })
 
-            //         Orm.newUser(user)
-            //     }
-            // })
+            switch(allEmailAddresses.includes(user.email)) {
+                case true:
+                    Orm.loginUser(user)
+                    break;
+                case false:
+                    Orm.newUser(user)
+                    break;
+                default:
+                    console.log('Whoops... Something broke..')
+            }
+            
         })
     },
     
@@ -32,16 +37,16 @@ const Orm = {
         })
     },
 
-    loginUser(req) {
-        // return new Promise((resolve, reject) => {
-        //   connection.query('SELECT * FROM burgers', function (error, results, fields){
-        //     if (error) {
-        //       reject(error)
-        //     } else {
-        //       resolve(results)
-        //     }
-        //   })
-        // })
+    loginUser(user) {
+        return new Promise((resolve, reject) => {
+          connection.query(`UPDATE user_accounts SET access_token=${connection.escape(user.accessToken)} WHERE email=${connection.escape(user.email)};`, function (error, results, fields){
+            if (error) {
+              reject(error)
+            } else {
+              resolve(results)
+            }
+          })
+        })
     },
 
     logoutUser(req) {

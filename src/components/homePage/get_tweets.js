@@ -1,4 +1,5 @@
 import React from 'react';
+import {TwitterTweetEmbed} from 'react-twitter-embed';
 
 class GetTweets extends React.Component {
   constructor(props) {
@@ -41,22 +42,20 @@ class GetTweets extends React.Component {
       return <div>Loading...</div>;
     } else {
       return (
-        <div class="container">
-          <div class="row">
-            <div class="col-sm">
-        {items.map((item, index) => {
+        <div className="container">
+          <div className="row">
+            <div className="col-sm">
+        {
+          items.map((item, index) => {
             return(
-              <div class="card">
-                <div class="card-header">
-                @{item.Account}
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title">{item.Name}</h5>
-                  <p class="card-text">{item.Text}</p>
-                </div>
+              <div className="tweets">
+                <TwitterTweetEmbed
+                  tweetId={item.id}
+                />
               </div>
             )
-        })}
+          })
+        }
             </div>
           </div>
         </div>

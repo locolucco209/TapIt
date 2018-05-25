@@ -8,8 +8,7 @@ const UserModel = {
           email: data.w3.U3,
           accessToken: data.Zi.access_token
       }
-      //Orm.hasUserAcount(user)
-      Orm.newUser(user)
+      Orm.hasUserAcount(user)
     },
 
     facebookUser (data) {
@@ -19,6 +18,7 @@ const UserModel = {
         email: data.email,
         accessToken: data.accessToken
       }
+      Orm.hasUserAcount(user)
     }
 }
 
