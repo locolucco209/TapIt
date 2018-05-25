@@ -11,19 +11,10 @@ const getTweets = (results) => {
         client.get('statuses/home_timeline', {screen_name: 'TapItSD'}, function(error, tweets, response) {
             let allTweets = []
             tweets.map((item, index) => {
-                let listing = index + 1
-                let t = tweets[index]
-                let twit = {
-                    Number: listing,
-                    Account: t.user.screen_name,
-                    Name: t.user.name,
-                    Text: t.text,
-                    Created: t.created_at,
-                }
-                allTweets.push(twit)
+              allTweets.push({id: tweets[index].id_str})
             })
-            if (error) {reject(error)} 
-            else {resolve(allTweets)} 
+              if (error) {reject(error)} 
+              else {resolve(allTweets)} 
         })
     })
 }
