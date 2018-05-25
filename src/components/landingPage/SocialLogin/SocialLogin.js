@@ -10,7 +10,7 @@ import './SocialLogin.css';
 const request = require('request');
 
 class SocialLogin extends Component {
-    
+
     constructor(props) {
         super(props);
         this.stats = {
@@ -21,11 +21,11 @@ class SocialLogin extends Component {
 
     static contextTypes = {
         router: PropTypes.object
-      }
+    }
 
     redirectToTarget = () => {
         this.context.router.history.push(`/homepage`)
-      }
+    }
 
     signup(res, type) {
 
@@ -43,7 +43,7 @@ class SocialLogin extends Component {
             addGoogleUser(response)
             //this.redirectToTarget()
         }
-        
+
         return (
             <div className="row" id="Body">
                 <div className="medium-12 columns">
@@ -54,8 +54,7 @@ class SocialLogin extends Component {
                         autoLoad={false}
                         fields="first_name,last_name,email"
                         callback={responseFacebook}
-                        // cssClass="fa fa-facebook"
-                    
+                        cssClass="fa fa-facebook-official fa-2x"
                     />
 
                     <GoogleLogin
@@ -72,3 +71,4 @@ class SocialLogin extends Component {
 };
 
 export default SocialLogin;
+
