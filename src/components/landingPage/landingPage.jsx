@@ -6,10 +6,9 @@ import './LandingPage.css';
 class LandingPage extends Component {
 
   render() {
+    
     return (
-
       <div className='container-fluid'>
-     
           <AgeGate />
           {/* <SocialLogin /> */}
       </div>

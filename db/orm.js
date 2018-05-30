@@ -49,7 +49,45 @@ const Orm = {
         })
     },
 
-    logoutUser(req) {
+    checkCookie(cookie) {
+        return new Promise((resolve, reject) => {
+          connection.query(`SELECT * FROM user_accounts WHERE access_token=${connection.escape(cookie)}`, function (error, results, fields){
+            if (error) {
+              reject(error)
+            } else {
+                switch(results[0]){
+                    case undefined :
+                      results = false
+                        resolve(results)
+                      break;
+                    default:
+                        resolve(results[0].access_token)
+                }
+            }
+          })
+        })
+    },
+
+    getInfo(cookie) {
+      return new Promise((resolve, reject) => {
+        connection.query(`SELECT * FROM user_accounts WHERE access_token=${connection.escape(cookie)}`, function (error, results, fields){
+          if (error) {
+            reject(error)
+          } else {
+              switch(results[0]){
+                  case undefined :
+                    results = false
+                      resolve(results)
+                    break;
+                  default:
+                      resolve(results[0].first_name)
+              }
+          }
+        })
+      })
+  },
+
+    logoutUser(data) {
         // return new Promise((resolve, reject) => {
         //   connection.query('SELECT * FROM burgers', function (error, results, fields){
         //     if (error) {
@@ -61,7 +99,7 @@ const Orm = {
         // })
     },
 
-    deleteUserAcount() {
+    deleteUserAcount(data) {
         // return new Promise((resolve, reject) => {
         //   connection.query('SELECT * FROM user_accounts WHERE ', function (error, results, fields){
         //     if (error) {

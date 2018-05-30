@@ -19,7 +19,15 @@ const UserModel = {
         accessToken: data.accessToken
       }
       Orm.hasUserAcount(user)
-    }
+    },
+
+    auth (cookie) {
+      return Orm.checkCookie(cookie)
+    },
+
+    getInfo (cookie) {
+      return Orm.getInfo(cookie)
+    },
 }
 
 module.exports = UserModel

@@ -9,22 +9,34 @@ module.exports = (app) => {
         res.send(JSON.stringify(results))
       })
     });
+
+  app.post('/user_auth', (req, res) => {
+    let cookie = req.body.data.cookie
+    UserModel.auth(cookie)
+    .then((response) => {
+      res.send(response)
+    })
+  });
+
+  app.post('/user_name', (req, res) => {
+    let cookie = req.body.data.cookie
+    UserModel.getInfo(cookie)
+    .then((response) => {
+      res.send(response)
+    })
+  });
   
   app.post('/api/sign_up_Go', (req, res) => {
     let accessToken = req.body.data.response.Zi.access_token
     let data = req.body.data.response
-      res.set('Set-Cookie', [`tapIt_user=${accessToken}`]);
-      res.writeHead(200, { 'Content-Type': 'text/plain' });
-      res.end('ok')
+      res.cookie('tapIt_user' , accessToken).send('Cookie is set');
         UserModel.googleUser(data)
     });
 
   app.post('/api/sign_up_Fb', (req, res) => {
     let accessToken = req.body.data.response.accessToken
     let data = req.body.data.response
-      res.set('Set-Cookie', [`tapIt_user=${accessToken}`]);
-      res.writeHead(200, { 'Content-Type': 'text/plain' });
-      res.end('ok')
+      res.cookie('tapIt_user' , accessToken).send('Cookie is set');
         UserModel.facebookUser(data)
     });
 

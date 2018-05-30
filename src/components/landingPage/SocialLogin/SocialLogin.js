@@ -22,7 +22,7 @@ class SocialLogin extends Component {
     static contextTypes = {
         router: PropTypes.object
     }
-
+    //need to make this wait so the browser has time to set the cookie before validation
     redirectToTarget = () => {
         this.context.router.history.push(`/homepage`)
     }
@@ -36,7 +36,7 @@ class SocialLogin extends Component {
             console.log(response);
             this.signup(response, 'facebook')
             addFbUser(response)
-            this.redirectToTarget()
+            this.redirectToTarget() 
         }
         const responseGoogle = (response) => {
             console.log(response);
