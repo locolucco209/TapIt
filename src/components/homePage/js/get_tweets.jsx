@@ -18,7 +18,6 @@ class GetTweets extends React.Component {
     .then((res) => {return res.json()})
       .then(
         (result) => {
-          console.log(result)
           this.setState({
             isLoaded: true,
             items: result
@@ -42,7 +41,7 @@ class GetTweets extends React.Component {
       return <div>Loading...</div>;
     } else {
       return (
-        <div className="container">
+        <div className="container" id="tweetWrapper">
           <div className="row">
             <div className="col-sm">
         {

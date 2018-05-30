@@ -1,5 +1,5 @@
 import LandingPage from './landingPage/landingPage.jsx'
-import HomePage from './homePage/homePage.js'
+import HomePage from './homePage/homePage'
 
 export {
     LandingPage,
