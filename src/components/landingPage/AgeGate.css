@@ -12,10 +12,14 @@
 .input-age {
     margin: 4px;
     background-color: transparent;
-    border: 0px solid;
+    border: 0px solid white;
     border-bottom: 2px solid white;
     color: white;
     display: inline-flex;
+}
+
+textarea:focus, input:focus{
+    outline-color: white;
 }
 
 ::placeholder{
