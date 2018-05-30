@@ -1,5 +1,44 @@
-.kep-login-facebook{ 
-  width:50px;
-  /* background-color: aquamarine; */
-   
-} 
+button.kep-login-facebook.metro{
+  box-sizing: border-box;
+  border-radius: 5px;
+  background-color:#4C69BA;
+  position: relative;
+  border-color: #354C8C;
+  top:3px;
+}
+
+.kep-login-facebook.metro {
+  background-color: #4C69BA;
+  background-image: linear-gradient(#4C69BA, #3B55A0);
+  text-shadow: 0 -1px 0 #354C8C;
+  width:250px;
+  height:50px;
+  font:400 13.3333px Arial;
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/14082/icon_facebook.png') 14px 14px no-repeat border-box ;
+  margin-right: 5px;
+  
+}
+
+.kep-login-facebook.metro:hover,
+.kep-login-facebook.metro:focus {
+  background-image: linear-gradient(#5B7BD5, #4864B1);
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/14082/icon_facebook.png') 14px 14px no-repeat border-box  #5B7BD5;
+  margin-right: 5px;
+}
+
+
+button.googleClass{
+  width: 250px;
+  height: 50px;
+  color: white; 
+  background-color:#FF0000;
+  border: 1px solid #FF0000;
+  border-radius: 5px;
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/14082/icon_google.png') 14px 14px no-repeat border-box #FF0000 ;
+  font:400 13.3333px Arial;
+}
+
+button.googleClass:hover,
+button.googleClass:focus {
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/14082/icon_google.png') 14px 14px no-repeat border-box #E74B37;
+}
