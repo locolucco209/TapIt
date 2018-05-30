@@ -65,7 +65,11 @@ class AgeGate extends Component {
                 <div className="container-fluid">
                     <div className="row ageGate">
 
-                        <div className="col-12 col-sm-12 col-md-12">
+                        <div className="col ml-3 mb-4">
+                            {this.state.showSocial && <SocialLogin />}
+                        </div>
+
+                        <div className="col-12 col-sm-12 col-md-12 mt-2">
                             <input className="input-age" ref="month" placeholder="MM" />
                             <input className="input-age" ref="day" placeholder="DD" />
                             <input className="input-age" ref="year" placeholder="YYYY" />
@@ -77,9 +81,7 @@ class AgeGate extends Component {
                             {this.state.showText && <Show />}
                         </div>
 
-                        <div>
-                            {this.state.showSocial && <SocialLogin />}
-                        </div>
+                      
 
                     </div>
                 </div>
