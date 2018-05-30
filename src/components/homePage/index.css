@@ -1,98 +1,93 @@
 #homepage {
-    background: linear-gradient(#ffffff, #ccefff);
+  background: linear-gradient(#ffffff, #ccefff);
 }
 
 .header {
-    background: linear-gradient(to right,  #ff9900 , #ffff00);
-    height: 10%;
-    width: 100%;
-    position: fixed;
-    z-index: 1;
-    border-bottom: 1px solid #e67300;
-    box-shadow: 0px 0px 5px #e67300, inset 0px 0px 2px #e67300;
+  background: linear-gradient(to right, #ff9900, #ffff00);
+  height: 10%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  border-bottom: 1px solid #e67300;
+  box-shadow: 0px 0px 5px #e67300, inset 0px 0px 2px #e67300;
 }
 
 .twitter-tweet {
-    margin-left: auto;
-    margin-right: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #welcome {
-    position: fixed;
-    top: 3%;
-    left: 2%;
+  position: fixed;
+  top: 3%;
+  left: 2%;
 }
 
 .dropdown {
-    position: fixed;
-    top: 3%;
-    left: 90%;
+  position: fixed;
+  top: 3%;
+  left: 90%;
 }
 
 @media (min-width: 200px) {
-    .row {
-        padding-top: 22%;
-    }
-
-    .dropdown {
-        position: fixed;
-        top: 3%;
-        left: 75%;
-    }
+  .row {
+    padding-top: 22%;
+  }
+  .dropdown {
+    position: fixed;
+    top: 3%;
+    left: 75%;
+  }
 }
 
 @media (min-width: 400px) {
-    .row {
-        padding-top: 20%;
-    }
-
-    .dropdown {
-        position: fixed;
-        top: 3%;
-        left: 75%;
-    }
+  .row {
+    padding-top: 20%;
+  }
+  .dropdown {
+    position: fixed;
+    top: 3%;
+    left: 75%;
+  }
 }
 
 @media (min-width: 500px) {
-    .row {
-        padding-top: 15%;
-    }
-
-    .dropdown {
-        position: fixed;
-        top: 3%;
-        left: 80%;
-    }
+  .row {
+    padding-top: 15%;
+  }
+  .dropdown {
+    position: fixed;
+    top: 3%;
+    left: 80%;
+  }
 }
 
 @media (min-width: 600px) {
-    .dropdown {
-        position: fixed;
-        top: 3%;
-        left: 85%;
-    }
+  .dropdown {
+    position: fixed;
+    top: 3%;
+    left: 85%;
+  }
 }
 
 @media (min-width: 766px) {
-    .row {
-        padding-top: 10%;
-    }
-
-    .dropdown {
-        position: fixed;
-        top: 3%;
-        left: 85%;
-    }
+  .row {
+    padding-top: 10%;
+  }
+  .dropdown {
+    position: fixed;
+    top: 3%;
+    left: 85%;
+  }
 }
 
 @media (min-width: 980px) {
-    .row {
-        padding-top: 7%;
-    }
-
-    .dropdown {
-        position: fixed;
-        top: 3%;
-        left: 90%;
-    }
+  .row {
+    padding-top: 7%;
+  }
+  .dropdown {
+    position: fixed;
+    top: 3%;
+    left: 90%;
+  }
 }
