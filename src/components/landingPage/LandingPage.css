@@ -12,3 +12,9 @@ body{
     background-size: cover;
 }
 
+img{
+    margin-top:50px;
+    width:300px;
+    height:100px;
+}
+

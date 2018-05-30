@@ -7,9 +7,12 @@ import addGoogleUser from './addUsers/addGoogleUser';
 import addFbUser from './addUsers/addFbUser';
 import './SocialLogin.css';
 
+
 const request = require('request');
 
 class SocialLogin extends Component {
+
+    // fcStyle={width: "250px", height: "50px", color: "white", backgroundColor: "red" }
 
     constructor(props) {
         super(props);
@@ -46,27 +49,30 @@ class SocialLogin extends Component {
         }
 
         return (
+
             <div className="row" id="Body">
+
                 <div className="medium-12 columns">
                     <h1 id="WelcomeText">Please Login Wih Your Social Login</h1>
 
-                    <FacebookLogin
+                    <div>
+                        <FacebookLogin
                         appId={process.env.REACT_APP_Facbook_App_Id}
                         autoLoad={false}
                         fields="first_name,last_name,email"
                         callback={responseFacebook}
-                        cssClass="fa fa-facebook-official fa-2x"
-                    />
+                        />
 
-                    <GoogleLogin
-                        clientId={process.env.REACT_APP_Google_Client_Id}
-                        buttonText="Google Login"
-                        onSuccess={responseGoogle}
-                        onFailure={responseGoogle}
-                    />
+                        <GoogleLogin className="googleClass"
+                            buttonText="LOGIN WITH GOOGLE"
+                            onSuccess={responseGoogle}
+                            onFailure={responseGoogle}
+                        />
+
+                    </div>
 
                 </div>
-            </div>
+            </div >
         );
     }
 };
