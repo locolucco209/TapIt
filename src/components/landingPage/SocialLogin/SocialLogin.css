@@ -16,6 +16,7 @@ button.kep-login-facebook.metro{
   font:400 13.3333px Arial;
   background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/14082/icon_facebook.png') 14px 14px no-repeat border-box ;
   margin-right: 5px;
+  margin-bottom: 5px;
   
 }
 
@@ -41,4 +42,10 @@ button.googleClass{
 button.googleClass:hover,
 button.googleClass:focus {
   background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/14082/icon_google.png') 14px 14px no-repeat border-box #E74B37;
+}
+
+.medium-12{
+  position: absolute;
+  top:-150px;
+  left:5px;
 }

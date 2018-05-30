@@ -53,7 +53,7 @@ class SocialLogin extends Component {
             <div className="row" id="Body">
 
                 <div className="medium-12 columns">
-                    <h1 id="WelcomeText">Please Login Wih Your Social Login</h1>
+                    <h1 id="WelcomeText">Login With FaceBook or Google</h1>
 
                     <div>
                         <FacebookLogin
