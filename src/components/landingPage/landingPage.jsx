@@ -7,13 +7,15 @@ import './LandingPage.css';
 class LandingPage extends Component {
 
   render() {
-    
+
     return (
       <div className='container-fluid'>
 
-         <img src={image} alt="logo" />
-          <AgeGate />
-          {/* <SocialLogin /> */}
+        <div className="col-12 col-sm-12 col-md-6">
+          <img src={image} alt="logo" />
+        </div>
+        <AgeGate />
+        {/* <SocialLogin /> */}
       </div>
 
     );
