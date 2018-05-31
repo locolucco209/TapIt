@@ -10,6 +10,13 @@ module.exports = (app) => {
       })
     });
 
+  app.get('/api/get_breweries', (req, res) => {
+      getTweets()
+      .then((results) => {
+        res.send(JSON.stringify(results))
+      })
+    });
+
   app.post('/user_auth', (req, res) => {
     let cookie = req.body.data.cookie
     UserModel.auth(cookie)
@@ -21,6 +28,22 @@ module.exports = (app) => {
   app.post('/user_name', (req, res) => {
     let cookie = req.body.data.cookie
     UserModel.getInfo(cookie)
+    .then((response) => {
+      res.send(response)
+    })
+  });
+
+  app.post('/logout', (req, res) => {
+    let cookie = req.body.data.cookie
+    UserModel.logout(cookie)
+    .then((response) => {
+      res.send(response)
+    })
+  });
+
+  app.post('/delete_account', (req, res) => {
+    let cookie = req.body.data.cookie
+    UserModel.deleteAccount(cookie)
     .then((response) => {
       res.send(response)
     })

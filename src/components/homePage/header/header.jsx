@@ -1,6 +1,6 @@
 import React from 'react';
-import hasCookieCheck from './js/hasCookie'
-import Nav from './nav'
+import hasCookieCheck from './js/hasCookieHeader'
+import Nav from './nav/nav'
 
 class Header extends React.Component {
   constructor(props) {
@@ -8,12 +8,18 @@ class Header extends React.Component {
     this.state ={
       name: ''
     }
+    this.toggleViews = this.props.toggleViews
+    this.Tweets = this.props.Tweets
+    this.Breweries = this.props.Breweries
   }
 
   componentDidMount() {
     hasCookieCheck(document.cookie)
     .then((response) => {
-      this.setState({name: response})
+      this.setState({name: response.data})
+    })
+    .catch((error) => {
+      console.log(error)
     })
   }
    
@@ -22,7 +28,11 @@ class Header extends React.Component {
       <div className="header">
 
         <p id='welcome'>Welcome {this.state.name}</p>
-        <Nav />
+        <Nav 
+        toggleViews={this.toggleViews}
+        Tweets={this.props.Tweets}
+        Breweries={this.props.Breweries}
+        />
     
       </div>
     );

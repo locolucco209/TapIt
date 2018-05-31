@@ -29,6 +29,25 @@
   left: 90%;
 }
 
+.navButton{
+  margin      : 0;
+  padding     : 0;
+  border      : 0;
+  background  : transparent;
+  font-family : inherit;
+  font-size   : 1em;
+  cursor      : pointer;
+}
+
+.navButton::-moz-focus-inner{
+  padding : 0;
+  border  : 0;
+}
+
+#dropdownMenuButton{
+  background-color: #ff9900;
+}
+
 @media (min-width: 200px) {
   .row {
     padding-top: 22%;

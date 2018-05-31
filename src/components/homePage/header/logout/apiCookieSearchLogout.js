@@ -6,12 +6,11 @@ const checkCookie = (cookie) => {
 
     let dbCookie
 
-      axios.post('/user_name', {
+      axios.post('/logout', {
         data: {cookie}
       })
       .then(function (response) {
-        dbCookie = response.data
-        resolve(dbCookie)
+        resolve(response)
       })
       .catch(function (error) {
         console.log(error);

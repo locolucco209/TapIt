@@ -1,4 +1,4 @@
-import checkCookie from './apiCookieSearch'
+import checkCookie from './apiCookieSearchLandingPage'
 
 const hasCookieCheck = (cookies) => {
   const split = cookies.split(';')

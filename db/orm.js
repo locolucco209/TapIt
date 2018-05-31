@@ -57,11 +57,10 @@ const Orm = {
             } else {
                 switch(results[0]){
                     case undefined :
-                      results = false
-                        resolve(results)
+                        resolve(false)
                       break;
                     default:
-                        resolve(results[0].access_token)
+                        resolve(true)
                 }
             }
           })
@@ -87,28 +86,29 @@ const Orm = {
       })
   },
 
-    logoutUser(data) {
-        // return new Promise((resolve, reject) => {
-        //   connection.query('SELECT * FROM burgers', function (error, results, fields){
-        //     if (error) {
-        //       reject(error)
-        //     } else {
-        //       resolve(results)
-        //     }
-        //   })
-        // })
+    logoutUser(cookie) {
+        return new Promise((resolve, reject) => {
+          connection.query(`UPDATE user_accounts SET access_token='' WHERE access_token=${connection.escape(cookie)};`, function (error, results, fields){
+            if (error) {
+              reject(error)
+            } else {
+              resolve(results)
+            }
+          })
+        })
     },
 
-    deleteUserAcount(data) {
-        // return new Promise((resolve, reject) => {
-        //   connection.query('SELECT * FROM user_accounts WHERE ', function (error, results, fields){
-        //     if (error) {
-        //       reject(error)
-        //     } else {
-        //       resolve(results)
-        //     }
-        //   })
-        // })
+
+    deleteUserAcount(cookie) {
+        return new Promise((resolve, reject) => {
+          connection.query(`DELETE FROM user_accounts WHERE access_token=${connection.escape(cookie)};`, function (error, results, fields){
+            if (error) {
+              reject(error)
+            } else {
+              resolve(results)
+            }
+          })
+        })
     },
 
 }
