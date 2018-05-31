@@ -28,6 +28,15 @@ const UserModel = {
     getInfo (cookie) {
       return Orm.getInfo(cookie)
     },
+
+    logout (cookie) {
+      return Orm.logoutUser(cookie)
+    },
+
+    deleteAccount (cookie) {
+      return Orm.deleteUserAcount(cookie)
+    }
 }
+
 
 module.exports = UserModel
