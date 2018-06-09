@@ -10,10 +10,10 @@ class HomePage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      Tweets: true,
-      Breweries: false
+      component: 'getTweets'
     }
-    this.toggleViews.bind(this)
+    this.componentState = this.componentState.bind(this)
+    this.displayComponent = this.displayComponent.bind(this)
   }
 
   componentDidMount() {
@@ -26,53 +26,35 @@ class HomePage extends React.Component {
     .catch((error) => {
       console.log(error)
     })
+  }
+
+  componentState(state) {
     this.setState({
-      Tweets: true,
-      Breweries: false
+      component: state
     })
   }
 
-  toggleViews() {
-    console.log(`togglin'`)
-    this.finalToggle()
-  }
-
-  finalToggle() {
-
-    switch(this.state.Tweets){
-      case true:
-        this.setState({Tweets: false})
-        this.setState({Breweries: true})
-      break;
-
-      case false:
-        this.setState({Tweets: true})
-        this.setState({Breweries: false})
-      break;
-
+  displayComponent() {
+    let component
+    switch(this.state.component) {
+      case 'getTweets':
+        component = <GetTweets />
+        break;
+      case 'allBreweries':
+        component = <AllBreweries />
+        break;
       default:
-        this.setState({Tweets: true})
-        this.setState({Breweries: false})
+        component = 'getTweets'
     }
+    return component
   }
+  
 
   render() {
     return(
       <div id="homepage">
-        <Header 
-        toggleViews={this.toggleViews}
-        Tweets={this.state.Tweets}
-        Breweries={this.state.Breweries}
-        />
-
-        <div>
-        {this.state.Tweets && <GetTweets />}
-        </div>
-
-        <div>
-        {this.state.Breweries && <AllBreweries />}
-        </div>
-
+          <Header componentState = {this.componentState} />
+          <this.displayComponent />
       </div>
     );
   };

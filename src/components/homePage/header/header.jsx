@@ -8,9 +8,6 @@ class Header extends React.Component {
     this.state ={
       name: ''
     }
-    this.toggleViews = this.props.toggleViews
-    this.Tweets = this.props.Tweets
-    this.Breweries = this.props.Breweries
   }
 
   componentDidMount() {
@@ -28,12 +25,8 @@ class Header extends React.Component {
       <div className="header">
 
         <p id='welcome'>Welcome {this.state.name}</p>
-        <Nav 
-        toggleViews={this.toggleViews}
-        Tweets={this.props.Tweets}
-        Breweries={this.props.Breweries}
-        />
-    
+        <Nav componentState = {this.props.componentState}/>
+  
       </div>
     );
   };

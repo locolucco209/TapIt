@@ -1,5 +1,6 @@
 const getTweets = require('../twitter/twitter.js')
 const UserModel = require('../db/models/userModel')
+const BreweryModel = require('../db/models/breweriesModel')
 
 module.exports = (app) => {
 
@@ -11,9 +12,9 @@ module.exports = (app) => {
     });
 
   app.get('/api/get_breweries', (req, res) => {
-      getTweets()
+      BreweryModel.getBreweries()
       .then((results) => {
-        res.send(JSON.stringify(results))
+        res.send(results)
       })
     });
 

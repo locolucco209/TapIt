@@ -3,15 +3,12 @@ import React from 'react';
 class Twitter extends React.Component {
     constructor(props) {
         super(props);
-        this.toggleViews = this.props.toggleViews
-        this.Tweets = this.props.Tweets
-        this.Breweries = this.props.Breweries
       }
 
     handleClick(e) {
-        e.preventDefault();
+      e.preventDefault()
         console.log('twitter')
-        this.toggleViews()
+        this.props.componentState('getTweets')
     }
   
     render() {
