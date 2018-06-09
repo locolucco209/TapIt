@@ -111,6 +111,17 @@ const Orm = {
         })
     },
 
+    getBreweries() {
+      return new Promise((resolve, reject) => {
+        connection.query(`SELECT * FROM sanDiego_breweries;`, function (error, results, fields){
+          if (error) {
+            reject(error)
+          } else {
+             resolve(results)
+              }
+        })
+      })
+  }
 }
 
 module.exports = Orm

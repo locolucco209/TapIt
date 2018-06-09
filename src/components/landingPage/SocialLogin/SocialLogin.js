@@ -41,6 +41,7 @@ class SocialLogin extends Component {
             this.refresh()
         }
         const responseGoogle = (response) => {
+            console.log(response, 'INSIDE OF SOcialLogin.js')
             this.signup(response, 'google')
             addGoogleUser(response)
             this.refresh()

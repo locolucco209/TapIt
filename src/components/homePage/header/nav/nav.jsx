@@ -7,9 +7,6 @@ import DeleteAccount from '../deleteAccount/deleteAccountBtn'
 class Nav extends React.Component {
   constructor(props) {
     super(props);
-    this.toggleViews = this.props.toggleViews
-    this.Tweets = this.props.Tweets
-    this.Breweries = this.props.Breweries
   }
   
   render() {
@@ -19,8 +16,8 @@ class Nav extends React.Component {
         Menu
       </button>
       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="#"> <Twitter toggleViews={this.toggleViews} Tweets={this.props.Tweets} Breweries={this.props.Breweries}/> </a>
-          <a class="dropdown-item" href="#"> <Breweries toggleViews={this.toggleViews} Tweets={this.props.Tweets} Breweries={this.props.Breweries}/> </a>
+          <a class="dropdown-item" href="#"> <Twitter componentState = {this.props.componentState}/> </a>
+          <a class="dropdown-item" href="#"> <Breweries componentState = {this.props.componentState}/> </a>
           <a class="dropdown-item" href="#"> <Logout /> </a>
           <a class="dropdown-item" href="#"> <DeleteAccount /> </a>
       </div>
